@@ -31,7 +31,7 @@ while True:
 for game in games:
     if game == selection:
         script_path = f"./games/{games[game]}.py"
-        # If the code is being run on Linux, it will use python3 as the interp path
+        # If the code is being run on Linux, it will use python3 as the interpreter path
         # I don't personally face this issue, I assume my distro has an alias?
         if platform.system() == "Linux":
             subprocess.run(['python3', script_path], check=True, cwd='./')
