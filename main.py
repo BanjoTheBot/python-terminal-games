@@ -3,6 +3,7 @@ Lachlan Paul, 2023
 The main file, all games can be accessed from here
 """
 import subprocess
+import platform
 
 # Unsure if these should be sorted by Alphabetical order or order of addition
 # Will probably split up lists if I make a lot of games that can be categorized
@@ -30,6 +31,11 @@ while True:
 for game in games:
     if game == selection:
         script_path = f"./games/{games[game]}.py"
-        subprocess.run(['python', script_path], check=True, cwd='./')
+        # If the code is being run on Linux, it will use python3 as the interp path
+        # I don't personally face this issue, I assume my distro has an alias?
+        if platform.system() == "Linux":
+            subprocess.run(['python3', script_path], check=True, cwd='./')
+        else:
+            subprocess.run(['python', script_path], check=True, cwd='./')
     else:
         print("Game doesn't exist, try again!")
