@@ -8,7 +8,7 @@ A collection of games and tests I made, accessible through one master file.
 
 Uses randomization and a list to simulate a game of Russian Roulette
 
-### Idea Submissions
+## Idea Submissions
 
 Have a game idea? Submit an issue describing the game, and I'll consider it!
 
