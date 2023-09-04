@@ -7,7 +7,7 @@ import random
 bullets = [1, 0, 0, 0, 0, 0]
 
 while True:
-    input(f"\nPress Enter to Bargain with the Devil ")
+    input(f"\nPress Enter to Begin ")
     chamber = random.choice(bullets)
 
     if chamber == 1:
