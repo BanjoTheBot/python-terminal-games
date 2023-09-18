@@ -12,7 +12,7 @@ games = {
     2: "hangman"
 }
 
-print(f"Available games to play:\n")
+print("Available games to play:\n")
 
 for game in games:
     name = games[game].title()
@@ -31,7 +31,7 @@ while True:
 
 for game in games:
     if game == selection:
-        script_path = f"games/{games[game]}.py"
+        script_path = f"games/{games[game]}/{games[game]}.py"
 
         # If the code is being run on Linux, it will use python3 as the interpreter path
         # I don't personally face this issue, I assume my distro has an alias?
