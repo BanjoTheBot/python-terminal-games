@@ -41,8 +41,8 @@ def main():
             print(f"{Fore.GREEN}Congrats, you win!{Style.RESET_ALL}")
             break
         if tries == 0:
-            print(f"{Fore.RED}You lose :({Style.RESET_ALL}")
-            print(f"The word was {Fore.GREEN}{word}{Style.RESET_ALL}")
+            print(f"\n{Fore.RED}You lose :({Style.RESET_ALL}")
+            print(f"The word was {Fore.GREEN}{''.join(word)}{Style.RESET_ALL}")
             break
 
         print("\nLetters you've already tried:")
