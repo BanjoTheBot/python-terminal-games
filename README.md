@@ -8,6 +8,10 @@ A collection of games and tests I made, accessible through one master file.
 
 Uses randomization and a list to simulate a game of Russian Roulette
 
+### Hangman
+
+Simulates a game of hangman, with custom input or words from a predetermined list
+
 ### Idea Submissions
 
 Have a game idea? Submit an issue describing the game, and I'll consider it!
