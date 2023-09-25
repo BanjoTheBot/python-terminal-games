@@ -2,6 +2,8 @@
 
 A collection of games and tests I made, accessible through one master file.
 
+To choose a game, run main.py in root, and it will give you a selection of games to play
+
 ## Games
 
 ### Russian Roulette
