@@ -13,13 +13,3 @@ Uses randomization and a list to simulate a game of Russian Roulette
 ### Hangman
 
 Simulates a game of hangman, with custom input or words from a predetermined list
-
-## Idea Submissions
-
-Have a game idea? Submit an issue describing the game, and I'll consider it!
-
-Simple guidelines:
-
-- Must be achievable as a terminal game, i.e; no PyGame or games that use graphics, must be all text
-- Cannot be too complicated or long, these are meant to be short games to play when bored,
-meaning nothing like Adventure or Story games
