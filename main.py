@@ -1,15 +1,16 @@
 """
-Lachlan Paul, 2023
-The main file, all games can be accessed from here
+    The main file, all games can be accessed from here
+    Lachlan Paul, 2023
 """
-import subprocess
 import platform
+import subprocess
 
 # Unsure if these should be sorted by Alphabetical order or order of addition
 # Will probably split up lists if I make a lot of games that can be categorized
 games = {
     1: "russian_roulette",
-    2: "hangman"
+    2: "hangman",
+    3: "tic-tac-toe"
 }
 
 print("Available games to play:\n")
@@ -39,5 +40,3 @@ for game in games:
             subprocess.run(['python3', script_path], check=True, cwd='./')
         else:
             subprocess.run(['python', script_path], check=True, cwd='./')
-            
-# There used to be an else statement here, but if the game doesn't exist, it's already caught earlier in the code

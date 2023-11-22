@@ -1,11 +1,13 @@
 """
-Lachlan Paul, 2023
-Simulates a game of hangman, with custom input or words from a predetermined list
+    Simulates a game of hangman, with custom input or words from a predetermined list
+    Lachlan Paul, 2023
 """
 import random
-from colorama import init as colorama_init
+
 from colorama import Fore
 from colorama import Style
+from colorama import init as colorama_init
+
 from words import word_list
 
 colorama_init()
@@ -15,6 +17,7 @@ known_letters = []
 letters = []
 tries = 11
 
+
 def main():
     while True:
         mode = input("\nY to input a custom word, N for pre-chosen word, ").lower().strip()
@@ -22,7 +25,7 @@ def main():
         # The ‘\033’ is the escape character
         # The ‘[1A’ says go up one line and the ‘[K’ says erase to the end of this line.
         # Apparently this won't work on all terminals? I hope there are no issues...
-        print ('\033[1A' + '\033[K')
+        print('\033[1A' + '\033[K')
 
         try:
             word = choose_word(mode)
@@ -34,7 +37,7 @@ def main():
     for i in word:
         known_letters.append("_")
         letters.append(i)
-    
+
     while True:
         print(known_letters)
         if known_letters == letters:
@@ -50,7 +53,7 @@ def main():
         guess = input("What's your guess? ").lower().strip()
         # This is here so that the input is still on the same line, but there's a space after the input
         print("\n")
-        
+
         if len(guess) > 1:
             print(f"{Fore.RED}More than one letter{Style.RESET_ALL}\n")
             continue
@@ -62,17 +65,19 @@ def main():
 
         guess_word(guess)
 
+
 def choose_word(selection):
     if selection == "y":
         word = input("Input your word, make sure nobodies looking! ").lower().strip()
-        print ('\033[1A' + '\033[K')
+        print('\033[1A' + '\033[K')
         word = list(word)
     elif selection == "n":
         word = random.choice(word_list)
     else:
         raise ValueError
-    
+
     return word
+
 
 def guess_word(guess):
     global tries

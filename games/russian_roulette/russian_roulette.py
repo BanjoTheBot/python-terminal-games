@@ -1,6 +1,6 @@
 """
-Lachlan Paul, 2023
-Uses randomization and a list to simulate a game of Russian Roulette
+    Uses randomization and a list to simulate a game of Russian Roulette
+    Lachlan Paul, 2023
 """
 import random
 
